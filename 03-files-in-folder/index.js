@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 fs.readdir(path.join(__dirname, 'secret-folder'), { withFileTypes: true }, (err, files) => {
+  if (err) {
+    console.error(err);
+  }
   for (const file of files) {
     if (file.isDirectory()) {
       continue;
