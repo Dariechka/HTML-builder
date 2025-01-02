@@ -7,7 +7,7 @@ const writableStream = fs.createWriteStream(path.join(__dirname, 'text.txt'));
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  prompt: 'Enter your sentence: '
+  prompt: 'Enter your sentence: ',
 });
 
 rl.prompt();
