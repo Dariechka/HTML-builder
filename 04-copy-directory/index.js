@@ -17,7 +17,7 @@ fs.readdir(
         `${file.path + '-copy' + '/' + file.name}`,
         (err) => {
           if (err) {
-            console.error(err); 
+            console.error(err);
           }
         },
       );
