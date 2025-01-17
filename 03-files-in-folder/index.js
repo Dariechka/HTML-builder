@@ -16,14 +16,13 @@ fs.readdir(
       const extensionName = path.extname(file.name);
       const fileName = path.basename(file.name, extensionName);
 
-      fs.stat(`${file.path}/${file.name}`,
-       (err, stats) => {
+      fs.stat(`${file.path}/${file.name}`, (err, stats) => {
         if (err) {
           console.error(err);
           return;
         }
-          const size = stats.size/1000;
-          console.log(
+        const size = stats.size / 1000;
+        console.log(
           fileName +
             ' ' +
             '-' +
